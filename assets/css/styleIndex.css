@@ -1,0 +1,76 @@
+/*CAROUSEL*/
+.contenedorCarousel{
+    width: 100%;
+    height: 800px;
+}
+#carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#carousel img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s;
+}
+/*SERVICIOS*/
+#servicios, #quienesSomos{
+    padding: 40px;
+}
+/*QUIENES SOMOS*/
+#quienesSomos{
+    background-color: var(--color-primary);
+    padding: 100px;
+}
+#servicios h3{
+    text-align: center;
+    color: var(--color-secondary);
+}
+#servicios table{
+    margin: 30px auto;
+    color: var(--color-secondary);
+}
+#quienesSomos p{
+    text-align: center;
+    color:white;
+    font-size: 18px;
+}
+/*HORARIOS*/
+#horarios{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#horarios h3{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#horarios table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 100px;
+}
+#horarios th, #horarios td{
+    border: 1px solid black;
+}
+#horarios th, #horarios .fondoVerde{
+    background-color: var(--color-primary);
+    color: white;
+}
+#horarios th, #horarios td{
+    padding: 20px 15px;
+    text-align: center;
+}
+.celdaPrimera{
+    color: transparent!important;
+    border: none!important;
+    background-color: transparent!important;
+}
+h3{
+    font-size: 30px;
+    color: var(--color-secondary);
+}
+
+

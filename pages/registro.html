@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gym Herculiano</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animation.css">
+    <link rel="stylesheet" href="../assets/css/styleRegistro.css">
+    <script src="/assets/js/functions.js"> </script>
+    <script src="/assets/js/models/sedes.js"> </script>
+    <script src="/assets/js/models/departamentos.js"> </script>
+    <script src="/assets/js/models/servicios.js"> </script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <div class="contenedorFormulario">
+            <form class="formularioRegistro" action="" method="get" onsubmit="return validarFormulario(event)">
+                <div class="tituloFormulario">
+                    <h4 class="titulos">Formulario de Inscripcion</h4>
+                </div>
+                <fieldset><legend>Datos personales</legend>
+                    <div class="contenedorInput">
+                        <label class="textos" for="txtNombre">Nombre: <span style="color:red;">*</span></label>
+                        <input class="myInput" type="text" id="txtNombre" name="txtNombre">
+                    </div>
+                    <div class="contenedorInput">
+                        <label for="txtApellidos">Apellidos: <span style="color:red;">*</span></label>
+                        <input class="myInput" type="text" id="txtApellidos" name="txtApellidos">
+                    </div>
+                    <div class="contenedorInput">
+                        <label for="txtTelefono">Teléfono: <span style="color:red;">*</span></label>
+                        <input class="myInput" type="number" id="txtTelefono" name="txtTelefono">
+                    </div>
+                    <div class="contenedorInput">
+                        <label for="txtEmail">Correo electrónico: <span style="color:red;">*</span></label>
+                        <input class="myInput" type="email" id="txtEmail" name="txtEmail">
+                    </div>
+                </fieldset>
+                <fieldset><legend>Datos de la inscripción</legend>
+                    <div class="contenedorInput">
+                        <label for="pregunta1">¿A que clase desea inscribirse? <span style="color:red;">*</span></label><br>
+                        <select id="pregunta1" name="pregunta1">
+                        </select>
+                    </div>
+                    <div class="contenedorInput">
+                        <label for="pregunta2">¿Forma de pago? <span style="color:red;">*</span></label><br>
+                        <select id="pregunta2" name="pregunta2">
+                            <option value="">Seleccione una opción</option>
+                            <option value="pago">Yape</option>
+                            <option value="pago">Plin</option>
+                            <option value="pago">Deposito a Cuenta Bancaria</option>
+                            <option value="pago">Efectivo</option>
+                        </select>
+                    </div>
+                    <div class="contenedorInput">
+                        <label for="pregunta3">¿En que sede desea Insribirse? <span style="color:red;">*</span></label><br>
+                        <select id="pregunta3" name="pregunta3"></select>
+                    </div>
+                </fieldset>
+                <div>
+                    <input type="submit" value="Inscibirse" id="btnIncribirse">
+                </div>
+            </form>
+                
+        </div>
+
+    </main>
+    <footer id="footer"></footer>
+    <script src="../assets/js/scriptRegistro.js"> </script>
+</body>
+
+</html>

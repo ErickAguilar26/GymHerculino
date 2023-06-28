@@ -1,0 +1,72 @@
+/* TABLA DE PRECIOS POR SERVICIO*/
+
+
+#contenedorTabla{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#contenedorTabla h3{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#contenedorTabla table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 100px;
+}
+#contenedorTabla th, #contenedorTabla td{
+    border: 1px solid black;
+}
+#contenedorTabla th, #contenedorTabla .fondoVerde{
+    background-color: var(--color-primary);
+    color: white;
+}
+#contenedorTabla th, #contenedorTabla td{
+    padding: 20px 15px;
+    text-align: center;
+}
+.celdaPrimera{
+    color: transparent!important;
+    border: none!important;
+    background-color: transparent!important;
+}
+h3{
+    font-size: 30px;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+/* FIN TABLA DE PRECIOS POR SERVICIO*/
+
+/* PARTE PRESENTACION DE IMAGENES CON FRASES*/
+
+.contenedorPresentador{
+    background-image: url('../img/fondoMaraco1.png');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.presentador{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+.presentador .imagen{
+    width: 50%;
+    background-color: transparent!important;
+}
+.presentador .frase{
+    width: 50%;
+    color: white;
+    padding: 8%;
+    background-color: var(--color-primary);
+}
+.presentador h4{
+    font-size: 30px;
+    text-align: center;
+}
+
+/* FIN PARTE PRESENTACION DE IMAGENES CON FRASES*/
+

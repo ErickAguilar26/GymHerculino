@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "idDepartamento": 1,
+      "descripcion": "Lima",
+      "observacion": "",
+      "idEstado": 1
+    },
+    {
+      "idDepartamento": 2,
+      "descripcion": "Ica",
+      "observacion": "",
+      "idEstado": 1
+    },
+    {
+      "idDepartamento": 3,
+      "descripcion": "Arequipa",
+      "observacion": "",
+      "idEstado": 1
+    },
+    {
+      "idDepartamento": 4,
+      "descripcion": "Ayacucho",
+      "observacion": "",
+      "idEstado": 1
+    },
+    {
+      "idDepartamento": 5,
+      "descripcion": "Cusco",
+      "observacion": "",
+      "idEstado": 1
+    },
+    {
+      "idDepartamento": 6,
+      "descripcion": "Puno",
+      "observacion": "",
+      "idEstado": 1
+    }
+  ]
+}

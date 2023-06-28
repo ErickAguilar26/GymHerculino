@@ -1,0 +1,125 @@
+main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px auto
+}
+main > h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-secondary);
+    font-size: 30px;
+}
+.izquierda{
+    width: 40%;
+    height: 700px;
+    overflow: auto;
+    padding: 30px;
+}
+.izquierda::-webkit-scrollbar {
+    width: 8px; /* Ancho del scroll */
+}
+
+.izquierda::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary); /* Color del scroll */
+    border-radius: 4px; /* Radio de los bordes del scroll */
+}
+
+.izquierda::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-secondary); /* Color del scroll al pasar el cursor sobre él */
+}
+
+.izquierda::-webkit-scrollbar-track {
+    background-color: #e6e6e6; /* Color del track (fondo) del scroll */
+}
+.fondoBlanco{
+
+}
+.derecha{
+    width: 50%;
+    height: 700px;
+    overflow: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+#contenedorSedes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+#contenedorSedes .contenedorsenalizquierda{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+#contenedorSedes .contenedorh3senal{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+.contenedorh3senal h3{
+    font-size: 30px;
+    color: var(--color-secondary);
+}
+#contenedorSedes h2{
+    width: 100%;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 20px;
+}
+#contenedorSedes img{
+    width: 100%; 
+    object-fit: cover; /* Controla cómo se ajusta y recorta la imagen */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+#contenedorSedes > img{
+    height: 200px;
+    margin-bottom: 40px; 
+}
+#contenedorSedes p{
+    width: 100%; 
+    text-align: justify;
+    margin-bottom: 40px;
+}
+#contenedorSedes iframe{
+    width: 80%; 
+    margin-bottom: 40px;
+}
+#contenedorSedes label{
+    width: 100%; 
+    font-size: 13px;
+    text-align: center;
+}
+.intermitenteColorPrrimario {
+  animation: intermitent 1s infinite linear;
+}
+#sedes table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+#sedes th, #sedes td{
+    border: 1px solid black;
+}
+#sedes th, #sedes .fondoVerde{
+    background-color: var(--color-primary);
+    color: white;
+}
+#sedes th, #sedes td{
+    padding: 20px 15px;
+    text-align: center;
+}
+.local:hover{
+    background-color: var(--color-secondary)!important;
+    cursor: pointer;
+}

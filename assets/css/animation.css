@@ -1,0 +1,24 @@
+@keyframes intermitent {
+  0% {
+    background: white;
+  }
+
+  50% {
+    background: var(--color-secondary);
+    ;
+  }
+
+  100% {
+    background: white;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
