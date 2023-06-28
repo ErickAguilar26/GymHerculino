@@ -37,7 +37,7 @@ function ocultarModal() {
 }
 
 
-function alertLoading(){
+function crearLoading(){
   var bodyElement = document.body;
     //insertAdjacentHTML() es un método que se puede utilizar en los elementos del DOM en JavaScript para insertar contenido HTML en una posición específica en relación con el elemento actual. LOs valores de position puedes ser: 'beforebegin': Inserta el contenido HTML justo antes del elemento. 'afterbegin': Inserta el contenido HTML al comienzo del elemento, como el primer hijo. 'beforeend': Inserta el contenido HTML al final del elemento, como el último hijo. 'afterend': Inserta el contenido HTML justo después del elemento.
     bodyElement.insertAdjacentHTML('afterbegin', `
@@ -49,28 +49,28 @@ function alertLoading(){
 }
 
 function mostrarLoading() {
-  document.getElementById('loading').style.display = 'flex';
-  var logo = document.getElementById('logoLoading');
-  var check = document.getElementById('checkLoading');
-  setTimeout(function () {
-    logo.classList.add('transition');
+  return new Promise((resolve, reject) => {
+    document.getElementById('loading').style.display = 'flex';
+    var logo = document.getElementById('logoLoading');
+    var check = document.getElementById('checkLoading');
     setTimeout(function () {
-      logo.style.display = 'none';
-      check.style.opacity = '';
-      check.classList.remove('hidden');
-      check.classList.add('transition');
-    }, 500);
-    check.classList.add('visible');
-    setTimeout(function () {
-      var loading = document.getElementById('loading');
-      loading.style.display = 'none';
-    }, 2000); // Cambiar el valor a la duración deseada de la transición
-  }, 2000);
+      logo.classList.add('transition');
+      setTimeout(function () {
+        logo.style.display = 'none';
+        check.style.opacity = '';
+        check.classList.remove('hidden');
+        check.classList.add('transition');
+      }, 500);
+      check.classList.add('visible');
+      setTimeout(function () {
+        var loading = document.getElementById('loading');
+        loading.style.display = 'none';
+        resolve(true);
+      }, 2000); // Cambiar el valor a la duración deseada de la transición
+    }, 2000);
+  });
 }
 
-// function ocultarLoading() {
-//   document.getElementById('loading').style.display = 'none';
-// }
 
 function loader(){
   var bodyElement = document.body;
@@ -114,30 +114,3 @@ function loader1(){
     }, 1500);
 }
 
-
-// fetch('pages/shared/header.html')
-//     .then(response => response.text())
-//     .then(data => {
-//       document.getElementById('header').innerHTML = data;
-//     });
-
-// fetch('pages/shared/footer.html')
-//     .then(response => response.text())
-//     .then(data => {
-//       document.getElementById('footer').innerHTML = data;
-//     });
-
-
-
-    var inputs = document.getElementsByClassName('myInput');
-
-    // Agregar el evento "focus" y "blur" a cada elemento de entrada
-    for (var i = 0; i < inputs.length; i++) {
-      inputs[i].addEventListener('focus', function() {
-        this.classList.add('change-border');
-      });
-    
-      inputs[i].addEventListener('blur', function() {
-        this.classList.remove('change-border');
-      });
-    }

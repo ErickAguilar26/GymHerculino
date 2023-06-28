@@ -1,5 +1,8 @@
-/* TABLA DE PRECIOS POR SERVICIO*/
+.tituloInscripcion{
+    margin: 30px auto;
+}
 
+/* TABLA DE PRECIOS POR SERVICIO*/
 
 #contenedorTabla{
     text-align: center;
@@ -39,12 +42,36 @@ h3{
 
 /* FIN TABLA DE PRECIOS POR SERVICIO*/
 
+
+.botonRegistrarse{
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+}
+.botonRegistrarse a{
+    display: inline-block;
+    background-color: var(--color-primary);
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px 60px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.botonRegistrarse a:hover{
+    color: var(--color-primary);
+    background-color: white;
+    border: 1px solid var(--color-primary);
+}
+
 /* PARTE PRESENTACION DE IMAGENES CON FRASES*/
 
 .contenedorPresentador{
-    background-image: url('../img/fondoMaraco1.png');
+    background-image: url('../img/fondoMaraco2.png');
     background-attachment: fixed;
     background-size: cover;
+    border: 1px solid black;
 }
 
 .presentador{
@@ -62,6 +89,7 @@ h3{
     color: white;
     padding: 8%;
     background-color: var(--color-primary);
+    border: 1px solid black;
 }
 .presentador h4{
     font-size: 30px;

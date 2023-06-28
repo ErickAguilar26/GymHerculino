@@ -1,27 +1,31 @@
-var sedes= modelSedes.data;
-var servicios= modelServicios.data;
-
-var plantillaSedes = `<option value="0">Selecciona una opción</option>`;
-var plantillaServicios = `<option value="0">Selecciona una opción</option>`;
+var sedes= [];
+var servicios= [];
 
 //completar select de servicios
-for(var x = 0; x < servicios.length ; x++){
-    plantillaServicios += `<option value="${servicios[x].idServicio}">${servicios[x].nombre}</option>`;
+function renderSelectServicios(){
+    return new Promise((resolve, reject) => {
+        var plantillaServicios = `<option value="0">Selecciona una opción</option>`;
+        for(var x = 0; x < servicios.length ; x++){
+            plantillaServicios += `<option value="${servicios[x].idServicio}">${servicios[x].nombre}</option>`;
+        }
+        resolve(plantillaServicios);
+    });
 }
-setTimeout(function(){
-    document.getElementById("pregunta1").innerHTML = plantillaServicios;
-}, 500);
+
 
 //completar select de sedes
-for(var x = 0; x < sedes.length ; x++){
-    plantillaSedes += `<option value="${sedes[x].idSede}">${sedes[x].descripcion}</option>`;
+function renderSelectSedes(){
+    return new Promise((resolve, reject) => {
+        var plantillaSedes = `<option value="0">Selecciona una opción</option>`;
+        for(var x = 0; x < sedes.length ; x++){
+            plantillaSedes += `<option value="${sedes[x].idSede}">${sedes[x].descripcion}</option>`;
+        }
+        resolve(plantillaSedes);
+    });
 }
-setTimeout(function(){
-    document.getElementById("pregunta3").innerHTML = plantillaSedes;
-}, 500);
 
 
-function validarFormulario(event) {
+async function validarFormulario(event) {
     event.preventDefault(); // Evita que se envíe el formulario de forma predeterminada
 
     var nombre = document.getElementById('txtNombre').value;
@@ -36,12 +40,33 @@ function validarFormulario(event) {
         alert('Por favor, complete todos los campos.');
         return false; // Detiene el envío del formulario
     }
-    mostrarLoading();
-    setTimeout(function(){
-        window.location.href = '/';
-        return true; // Permite el envío del formulario
-    }, 4000);
+    await mostrarLoading();
+    window.location.href = '../index.html';
+    return true; // Permite el envío del formulario
 }
 
-alertLoading();
-loader();
+async function traerSedes() {
+    try {
+        const response1 = await getSedes();
+        const data1 = await response1.json();
+        sedes = data1.data;
+
+        const response2 = await getServicios();
+        const data2 = await response2.json();
+        servicios = data2.data;
+
+        const response3 = await renderSelectServicios();
+        document.getElementById("pregunta1").innerHTML = response3;
+
+        const response4 = await renderSelectSedes();
+        document.getElementById("pregunta3").innerHTML = response4;
+    } catch (error) {
+        console.error(error);
+        // Manejar el error de forma adecuada
+    }
+}
+
+traerSedes();
+
+crearLoading();
+loader1();
