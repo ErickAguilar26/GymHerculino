@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "idCargo": 1,
+            "idArea": 1,
+            "nombre": "Gerente general",
+            "fechaCracion": "20230628"
+        },
+        {
+            "idCargo": 2,
+            "idArea": 1,
+            "nombre": "Secretaria de gerencia general",
+            "fechaCracion": "20230628"
+        },
+        {
+            "idCargo": 3,
+            "idArea": 2,
+            "nombre": "Administrador",
+            "fechaCracion": "20230628"
+        },
+        {
+            "idCargo": 4,
+            "idArea": 2,
+            "nombre": "Secretaria de administración",
+            "fechaCracion": "20230628"
+        },
+        {
+            "idCargo": 5,
+            "idArea": 3,
+            "nombre": "Gerente de RR.HH.",
+            "fechaCracion": "20230628"
+        },
+        {
+            "idCargo": 6,
+            "idArea": 4,
+            "nombre": "Entrenador Jefe",
+            "fechaCracion": "20230628"
+        },
+        {
+            "idCargo": 7,
+            "idArea": 4,
+            "nombre": "Entrenador",
+            "fechaCracion": "20230628"
+        }
+    ]
+}

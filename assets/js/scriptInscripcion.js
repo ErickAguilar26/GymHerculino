@@ -1,8 +1,7 @@
-var servicios = [];
+
 
 
 function renderPreciosServicios(){
-    
     return new Promise((resolve, reject)=>{
         // Obtener el elemento contenedor de la tabla
         const contenedorTabla = document.getElementById('contenedorTabla');
@@ -39,7 +38,8 @@ function renderPreciosServicios(){
             // Agregar las celdas de datos
             tipoPago.forEach((tipo, columnIndex) => {
                 const celdaDatos = document.createElement('td');
-                if(tipo==0){
+                console.log(tipo);
+                if(tipo !='Precio por mes'){
                     celdaDatos.textContent = servicio.precio_dia
                 }
                 else{

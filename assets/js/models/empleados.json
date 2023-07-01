@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+          "idEmpleado": 1,
+          "idTipoEmpleado": 1,
+          "idCargo": 1,
+          "nombres": "Erick Elías",
+          "a_paterno": "Aguilar",
+          "a_materno": "Gutiérrez",
+          "fechaNacimiento": "19950726",
+          "activo": "1"
+        },
+        {
+          "idEmpleado": 2,
+          "idTipoEmpleado": 2,
+          "idCargo": 2,
+          "nombres": "Kattia",
+          "a_paterno": "Munayco",
+          "a_materno": "Pisco",
+          "fechaNacimiento": "19890522",
+          "activo": "1"
+        },
+        {
+          "idEmpleado": 3,
+          "idTipoEmpleado": 1,
+          "idCargo": 3,
+          "nombres": "Benjamin",
+          "a_paterno": "Aparcana",
+          "a_materno": "Melgar",
+          "fechaNacimiento": "20000928",
+          "activo": "1"
+        },
+        {
+          "idEmpleado": 4,
+          "idTipoEmpleado": 2,
+          "idCargo": 4,
+          "nombres": "Nicole",
+          "a_paterno": "Vila",
+          "a_materno": "Azabache",
+          "fechaNacimiento": "20020818",
+          "activo": "1"
+        },
+        {
+          "idEmpleado": 5,
+          "idTipoEmpleado": 3,
+          "idCargo": 6,
+          "nombres": "Cesar",
+          "a_paterno": "del Aguila",
+          "a_materno": "Huamaní",
+          "fechaNacimiento": "19940225",
+          "activo": "1"
+        },
+        {
+          "idEmpleado": 6,
+          "idTipoEmpleado": 4,
+          "idCargo": 7,
+          "nombres": "Paolo",
+          "a_paterno": "Cueto",
+          "a_materno": "Rivas",
+          "fechaNacimiento": "19940905",
+          "activo": "1"
+        },
+        {
+          "idEmpleado": 7,
+          "idTipoEmpleado": 4,
+          "idCargo": 7,
+          "nombres": "Daniel",
+          "a_paterno": "Rojas",
+          "a_materno": "Market",
+          "fechaNacimiento": "19940905",
+          "activo": "1"
+        }
+    ]
+  }

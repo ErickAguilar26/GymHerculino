@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+          "idEmpleado": 5,
+          "idServicio": 1
+        },
+        {
+          "idEmpleado": 5,
+          "idServicio": 2
+        },
+        {
+          "idEmpleado": 5,
+          "idServicio": 3
+        },
+        {
+          "idEmpleado": 5,
+          "idServicio": 4
+        },
+        {
+          "idEmpleado": 5,
+          "idServicio": 5
+        },
+        {
+          "idEmpleado": 5,
+          "idServicio": 6
+        },
+        {
+          "idEmpleado": 6,
+          "idServicio": 2
+        },
+        {
+          "idEmpleado": 6,
+          "idServicio": 3
+        },
+        {
+          "idEmpleado": 6,
+          "idServicio": 6
+        },
+        {
+          "idEmpleado": 7,
+          "idServicio": 3
+        },
+        {
+          "idEmpleado": 7,
+          "idServicio": 4
+        },
+        {
+          "idEmpleado": 7,
+          "idServicio": 5
+        }
+    ]
+  }

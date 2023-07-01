@@ -1,0 +1,124 @@
+#tablaEntrenadores{
+    text-align: center;
+    margin: 50px auto;
+}
+#tablaEntrenadores h3{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#tablaEntrenadores table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 100px;
+}
+#tablaEntrenadores th, #tablaEntrenadores td{
+    border: 1px solid black;
+}
+#tablaEntrenadores th, #tablaEntrenadores .fondoVerde{
+    background-color: var(--color-primary);
+    color: white;
+}
+#tablaEntrenadores th, #tablaEntrenadores td{
+    padding: 20px 15px;
+    text-align: center;
+}
+.celdaPrimera{
+    color: transparent!important;
+    border: none!important;
+    background-color: transparent!important;
+}
+h3{
+    font-size: 30px;
+    color: var(--color-secondary);
+    margin: 20px auto;
+    text-align: center;
+}
+
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    border-top: 5px double var(--color-primary);
+    border-bottom: 5px double var(--color-primary);
+  }
+  
+  .image-container {
+    display: flex;
+    animation: slide 5s linear infinite;
+  }
+  
+  .image-container img {
+    width: 40%;
+    height: auto;
+    opacity: 0.5;
+    background-color: rgba(48, 33, 182, 0.5);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .textoSobrepuesto{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 300px;
+    margin: auto;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 35px;
+    padding: 0px 200px;
+    font-weight: bold;
+  }
+
+
+
+  .misionVisionValores{
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+  }
+  .card{
+    width: 30%;
+  }
+  .card .card-head{
+    background: var(--color-primary);
+    border-radius: 100%;
+    padding: 50px;
+    text-align: center;
+  }
+  .card .card-head img{
+    width: 70%;
+  }
+  .card .card-head h3{
+    color: #fff;
+  }
+  .card .card-body p{
+    padding: 30px;
+    text-align: justify;
+    margin-top: 20px;
+  }
+
+
+
+
+.textoEquipo{
+    text-align: center;
+}
+.imagenEquipo{
+    width: 100%;
+    text-align: center;
+}
+.imagenEquipo img{
+    width: 80%;
+    margin: 50px auto;
+}

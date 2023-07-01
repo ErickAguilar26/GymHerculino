@@ -1,6 +1,3 @@
-var sedes = [];
-var departamentos = [];
-
 async function renderizadoContenedorSedes(element, idSede) {
     removeAnimation();
     removeColor();

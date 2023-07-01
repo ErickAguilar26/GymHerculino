@@ -1,4 +1,3 @@
-var servicios= [];
 
 function getServicios() {
     return fetch('assets/js/models/servicios.json', {

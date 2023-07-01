@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "idArea": 1,
+            "nombre": "Gerencia General",
+            "activo": 1,
+            "fechaCreacion": "20230628"
+        },
+        {
+            "idArea": 2,
+            "nombre": "Administración",
+            "activo": 1,
+            "fechaCreacion": "20230628"
+        },
+        {
+            "idArea": 3,
+            "nombre": "Recursos Humanos",
+            "activo": 0,
+            "fechaCreacion": "20230628"
+        },
+        {
+            "idArea": 4,
+            "nombre": "Entrenamiento",
+            "activo": 1,
+            "fechaCreacion": "20230628"
+        },
+    ]
+}

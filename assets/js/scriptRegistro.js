@@ -1,5 +1,3 @@
-var sedes= [];
-var servicios= [];
 
 //completar select de servicios
 function renderSelectServicios(){
