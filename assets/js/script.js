@@ -1,14 +1,3 @@
-
-function getServicios() {
-    return fetch('assets/js/models/servicios.json', {
-        mode: 'no-cors',
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
-    });
-}
-
-
 var carrusel = [
     {
         nombre: '1',
@@ -69,105 +58,11 @@ function readyCarrusel(plantilla){
 }
 
 
-
-function renderCalendarioServicios(){
-    
-    return new Promise((resolve, reject)=>{
-        // Obtener el elemento contenedor de la tabla
-        const contenedorTabla = document.getElementById('horarios');
-        // Crear la tabla
-        const tabla = document.createElement('table');
-        // Crear la fila de encabezado
-        const encabezado = document.createElement('tr');
-        // Crear la celda vacía del encabezado
-        const celdaVacia = document.createElement('th');
-        // Agregar la clase .celdaPrimera a la celda vacia
-        celdaVacia.classList.add('celdaPrimera');
-        encabezado.appendChild(celdaVacia);
-        // Agregar las celdas del encabezado de columna (días de la semana)
-        const diasSemana = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
-        diasSemana.forEach(dia => {
-            const celda = document.createElement('th');
-            celda.textContent = dia.charAt(0).toUpperCase() + dia.slice(1); // Convertir la primera letra en mayúscula
-            encabezado.appendChild(celda);
-        });
-        // Agregar el encabezado a la tabla
-        tabla.appendChild(encabezado);
-        // Agregar las filas de la tabla con los datos de servicios
-        servicios.forEach((servicio, index) => {
-            const fila = document.createElement('tr');
-            // Agregar la celda del criterio de fila (nombre del servicio)
-            const celdaServicio = document.createElement('th');
-            celdaServicio.textContent = servicio.nombre;
-            if(servicio.color !== ""){
-                celdaServicio.style.backgroundColor = servicio.color;
-            }
-            fila.appendChild(celdaServicio);
-            // Agregar las celdas de datos
-            diasSemana.forEach((dia, columnIndex) => {
-                const celdaDatos = document.createElement('td');
-                if (servicio[dia] === "0") {
-                    celdaDatos.textContent = 'Sin servicio';
-                    celdaDatos.style.color = 'red';
-                    celdaDatos.style.fontWeight = 'bold';
-                } else if (servicio[dia] === "1") {
-                    const rangoHoras = servicio[dia + '_rangoHoras'];
-                    celdaDatos.textContent = rangoHoras;
-                }
-                fila.appendChild(celdaDatos);
-            });
-            // Agregar la fila a la tabla
-            tabla.appendChild(fila);
-        });
-        // Agregar la tabla al contenedor
-        contenedorTabla.appendChild(tabla);
-
-
-        resolve(true);
-    });
-}
-
-// function traerServicios(){
-//     getServicios()
-//         .then(response => response.json())
-//         .then(data => {
-//             servicios = data.data;
-//             return renderCarrusel();
-//         })
-//         .then(response => {
-//             readyCarrusel(response);
-//             return renderCalendarioServicios();
-//         })
-//         .then(response => {
-//             if(response == true){
-//                 console.log('Todo correcto');
-//             }
-//             else{
-//                 console.log('Todo mal');
-//             }
-//         })
-
-//         .catch(error => {
-//             console.error(error);
-//             // Manejar el error de forma adecuada
-//         });
-// }
-
 async function traerServicios() {
-    try {
-      const response = await getServicios();
-      const data = await response.json();
-      servicios = data.data;
-  
+    try {  
       const carruselResponse = await renderCarrusel();
       readyCarrusel(carruselResponse);
   
-      const calendarioResponse = await renderCalendarioServicios();
-      if (calendarioResponse === true) {
-        console.log('Todo correcto');
-      } else {
-        console.log('Todo mal');
-      }
     } catch (error) {
       console.error(error);
       // Manejar el error de forma adecuada

@@ -42,8 +42,8 @@ function crearLoading(){
     //insertAdjacentHTML() es un método que se puede utilizar en los elementos del DOM en JavaScript para insertar contenido HTML en una posición específica en relación con el elemento actual. LOs valores de position puedes ser: 'beforebegin': Inserta el contenido HTML justo antes del elemento. 'afterbegin': Inserta el contenido HTML al comienzo del elemento, como el primer hijo. 'beforeend': Inserta el contenido HTML al final del elemento, como el último hijo. 'afterend': Inserta el contenido HTML justo después del elemento.
     bodyElement.insertAdjacentHTML('afterbegin', `
     <div id="loading" style="display: none;">
-      <img id="logoLoading" src="/assets/img/logo.png" alt="Loading">
-      <img id="checkLoading" src="/assets/img/check.png" alt="Check" class="hidden" style="width: 200px!important;">
+      <img id="logoLoading" src="../assets/img/logo.png" alt="Loading">
+      <img id="checkLoading" src="../assets/img/check.png" alt="Check" class="hidden" style="width: 200px!important;">
       <p>Procesando...</p>
     </div>`);
 }
@@ -67,7 +67,7 @@ function mostrarLoading() {
         loading.style.display = 'none';
         resolve(true);
       }, 2000); // Cambiar el valor a la duración deseada de la transición
-    }, 2000);
+    }, 1500);
   });
 }
 

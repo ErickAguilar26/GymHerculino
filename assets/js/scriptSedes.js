@@ -1,3 +1,19 @@
+$.ajax({
+    method: "POST",
+    url: "../includes/helpers.php",
+    data: {
+        op: "obtenerSedes",
+        // filtro1: "valor1",
+        // filtro2: "valor2"
+    },
+    success: function(data){
+        sedes = data;
+    },
+    error: function(){
+        alert("Error de edición");
+    }
+});
+
 async function renderizadoContenedorSedes(element, idSede) {
     removeAnimation();
     removeColor();
@@ -6,6 +22,7 @@ async function renderizadoContenedorSedes(element, idSede) {
     var plantillaContenedorSedes = `<h2>Sede ${sede[0].descripcion}</h2>
       <img src="${sede[0].imagen}" alt="">
       <p>${sede[0].observacion}</p>
+      <iframe src='https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d961.2009846246216!2d${sede[0].longitud}!3d${sede[0].latitud}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDI5JzQxLjkiUyA3MMKwMDcnMzguNSJX!5e0!3m2!1ses!2spe!4v1685401340752!5m2!1ses!2spe' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>
       ${sede[0].mapa}
       <label><b>Fecha de apertura:</b> ${ConvertFromDate112(sede[0].fechaApertura)}</label>`;
     document.getElementById("contenedorSedes").innerHTML = plantillaContenedorSedes;
@@ -33,28 +50,7 @@ function removeColor() {
     });
 }
 
-function renderTable() {
-    return new Promise((resolve, reject) => {
-        var plantillaSedes = ``;
-        var plantillaLocales = ``;
-        for (let x = 0; x < departamentos.length; x++) {
-            let sedesFiltrada = sedes.filter(sede => departamentos[x].idDepartamento == sede.idDepartamento);
-            plantillaLocales = ``;
-            for (let i = 0; i < sedesFiltrada.length; i++) {
-                plantillaLocales += `<tr><td class="local" onClick="renderizadoContenedorSedes(this,${sedesFiltrada[i].idSede});">${sedesFiltrada[i].descripcion}</td></tr>`;
-            }
-            plantillaSedes += `<table>
-            <tr>
-                <th>${departamentos[x].descripcion}</th>
-            </tr>${plantillaLocales}
-            </table>`;
-        }
-        resolve(plantillaSedes);
-    });
-}
-
-function inicializador(plantilla) {
-    document.getElementById("sedes").innerHTML = plantilla;
+function inicializador() {
     // Obtener todas las tablas dentro del contenedor
     const tables = document.querySelectorAll('#sedes table');
     // Obtener la primera tabla
@@ -64,60 +60,17 @@ function inicializador(plantilla) {
     firstRow.classList.add('intermitenteColorPrrimario');
 }
 
-// function traerSedes() {
-//     getSedes()
-//         .then(response => response.json())
-//         .then(data => {
-//             sedes = data.data;
-//             return getdepartamentos();
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             departamentos = data.data;
-//             return renderTable();
-//         })
-//         .then(response => {
-//             inicializador(response);
-//         })
-//         .catch(error => {
-//             console.error(error);
-//             // Manejar el error de forma adecuada
-//         });
-//     console.log('ejec');
-// }
 
-async function traerSedes() {
+async function init() {
     try {
-        const response1 = await getSedes();
-        const data1 = await response1.json();
-        sedes = data1.data;
-
-        const response2 = await getdepartamentos();
-        const data2 = await response2.json();
-        departamentos = data2.data;
-
-        const response3 = await renderTable();
-        inicializador(response3);
+        inicializador();
+        
     } catch (error) {
         console.error(error);
         // Manejar el error de forma adecuada
     }
 }
 
-traerSedes();
+init();
 loader1();
 
-
-
-
-
-// function relacionarSedesDepartamentos(){
-//     return sedes.map(item => {
-//         const descripcionDepartamento = departamentos.find(depto => depto.idDepartamento === item.idDepartamento)?.descripcion;
-//         return {
-//           ...item,
-//           descripcionDepartamento,
-//         };
-//     });
-// }
-//var sedesFinal = relacionarSedesDepartamentos();
